@@ -123,5 +123,70 @@ namespace Proyecto_Sistemas_Programables
         {
             serialPort1.Close();
         }
+
+        private void PicBoxVentiladorOn_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOn.Visible = false;
+            PicBoxVentiladorOff.Visible = true;
+        }
+
+        private void PicBoxVentiladorOff_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOn.Visible = true;
+            PicBoxVentiladorOff.Visible = false;
+        }
+
+        private void PicBoxVentanaCerrada_Click(object sender, EventArgs e)
+        {
+            PicBoxVentanaAbierta.Visible = true;
+            PicBoxVentanaCerrada.Visible = false;
+        }
+
+        private void PicBoxVentanaAbierta_Click(object sender, EventArgs e)
+        {
+            PicBoxVentanaAbierta.Visible = false;
+            PicBoxVentanaCerrada.Visible = true;
+        }
+
+        private void PicBoxPuertaAbierta_Click(object sender, EventArgs e)
+        {
+            PicBoxPuertaAbierta.Visible = false;
+            PicBoxPuertaCerrada.Visible = true;
+        }
+
+        private void PicBoxPuertaCerrada_Click(object sender, EventArgs e)
+        {
+            PicBoxPuertaAbierta.Visible = true;
+            PicBoxPuertaCerrada.Visible = false;
+        }
+
+        private void PicBoxLedEncendido_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagado.Visible = true;
+            PicBoxLedEncendido.Visible = false;
+        }
+
+        private void PicBoxFocoApagado_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagado.Visible = false;
+            PicBoxLedEncendido.Visible = true;
+        }
+
+        private void PicBoxFocoApagadoAmarillo_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagadoAmarillo.Visible = false;
+            PicBoxEncendidoAmarillo.Visible = true;
+        }
+
+        private void PicBoxEncendidoAmarillo_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagadoAmarillo.Visible = true;
+            PicBoxEncendidoAmarillo.Visible = false;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
