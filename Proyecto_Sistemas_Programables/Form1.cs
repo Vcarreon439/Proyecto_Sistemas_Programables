@@ -16,6 +16,9 @@ namespace Proyecto_Sistemas_Programables
     public partial class frmPrincipal : Form
     {
         Dictionary<string, string> Dispositivos_COM = new Dictionary<string, string>();
+        string stateString="";
+
+
 
         public frmPrincipal()
         {
@@ -67,20 +70,11 @@ namespace Proyecto_Sistemas_Programables
 
             try
             {
-                SerialPort serialPort = new SerialPort();
-                serialPort.PortName = cboPorts.Text;
-                serialPort.BaudRate = 9600;
-                serialPort.Open();
+                serialPort1.PortName = cboPorts.Text;
+                serialPort1.BaudRate = 9600;
+                serialPort1.Open();
 
-                serialPort.Write("x");
-
-                string a = serialPort.ReadExisting();
-                Console.WriteLine(a);
-                Thread.Sleep(3000);
-
-                serialPort.Write("p");
-
-                serialPort.Close();
+                
             }
             catch (Exception ex)
             {
