@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_Sistemas_Programables
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -50,6 +50,7 @@
             this.cboPorts = new System.Windows.Forms.ComboBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.lblPortDesc = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -227,6 +228,7 @@
             // 
             // tbConfig
             // 
+            this.tbConfig.Controls.Add(this.lblPortDesc);
             this.tbConfig.Controls.Add(this.cboPorts);
             this.tbConfig.Location = new System.Drawing.Point(4, 22);
             this.tbConfig.Name = "tbConfig";
@@ -241,19 +243,29 @@
             this.cboPorts.FormattingEnabled = true;
             this.cboPorts.Location = new System.Drawing.Point(23, 25);
             this.cboPorts.Name = "cboPorts";
-            this.cboPorts.Size = new System.Drawing.Size(135, 21);
+            this.cboPorts.Size = new System.Drawing.Size(167, 21);
             this.cboPorts.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cboPorts, "Seleccione el puerto correspondiente a su Arduino");
+            this.cboPorts.SelectedIndexChanged += new System.EventHandler(this.cboPorts_SelectedIndexChanged);
             // 
-            // Form1
+            // lblPortDesc
+            // 
+            this.lblPortDesc.AutoSize = true;
+            this.lblPortDesc.Location = new System.Drawing.Point(20, 59);
+            this.lblPortDesc.Name = "lblPortDesc";
+            this.lblPortDesc.Size = new System.Drawing.Size(0, 13);
+            this.lblPortDesc.TabIndex = 1;
+            // 
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 414);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -265,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tbConfig.ResumeLayout(false);
+            this.tbConfig.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -292,6 +305,7 @@
         private System.Windows.Forms.ComboBox cboPorts;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.Label lblPortDesc;
     }
 }
 
