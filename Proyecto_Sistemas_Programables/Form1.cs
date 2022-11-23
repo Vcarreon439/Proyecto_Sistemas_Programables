@@ -92,6 +92,10 @@ namespace Proyecto_Sistemas_Programables
 
             Invoke(new MethodInvoker(()=>{
                 lblLevel.Text = aaa[0];
+                lblSensFoto.Text = aaa[1];
+                lblSenseSoil.Text = aaa[2];
+                lblSenseRain.Text = aaa[3];
+                lblSenseGas.Text = aaa[4];
             }));
 
             Thread.Sleep(500);

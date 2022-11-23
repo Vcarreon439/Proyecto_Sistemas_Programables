@@ -50,11 +50,19 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblLevel = new System.Windows.Forms.Label();
+            this.lblSensFoto = new System.Windows.Forms.Label();
+            this.lblSenseSoil = new System.Windows.Forms.Label();
+            this.lblSenseRain = new System.Windows.Forms.Label();
+            this.lblSenseGas = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -266,6 +274,14 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.lblSenseGas);
+            this.tabPage2.Controls.Add(this.lblSenseRain);
+            this.tabPage2.Controls.Add(this.lblSenseSoil);
+            this.tabPage2.Controls.Add(this.lblSensFoto);
             this.tabPage2.Controls.Add(this.lblLevel);
             this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.iconPictureBox1);
@@ -277,9 +293,23 @@
             this.tabPage2.Text = " Valores";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // serialPort1
+            // lblLevel
             // 
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(98, 37);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(25, 13);
+            this.lblLevel.TabIndex = 6;
+            this.lblLevel.Text = "000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(98, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Sensor de Precencia";
             // 
             // iconPictureBox1
             // 
@@ -295,23 +325,81 @@
             this.iconPictureBox1.TabIndex = 4;
             this.iconPictureBox1.TabStop = false;
             // 
-            // label1
+            // serialPort1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Nivel de Humedad";
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
-            // lblLevel
+            // lblSensFoto
             // 
-            this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(98, 37);
-            this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(25, 13);
-            this.lblLevel.TabIndex = 6;
-            this.lblLevel.Text = "000";
+            this.lblSensFoto.AutoSize = true;
+            this.lblSensFoto.Location = new System.Drawing.Point(100, 124);
+            this.lblSensFoto.Name = "lblSensFoto";
+            this.lblSensFoto.Size = new System.Drawing.Size(25, 13);
+            this.lblSensFoto.TabIndex = 7;
+            this.lblSensFoto.Text = "000";
+            // 
+            // lblSenseSoil
+            // 
+            this.lblSenseSoil.AutoSize = true;
+            this.lblSenseSoil.Location = new System.Drawing.Point(264, 124);
+            this.lblSenseSoil.Name = "lblSenseSoil";
+            this.lblSenseSoil.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseSoil.TabIndex = 8;
+            this.lblSenseSoil.Text = "000";
+            // 
+            // lblSenseRain
+            // 
+            this.lblSenseRain.AutoSize = true;
+            this.lblSenseRain.Location = new System.Drawing.Point(464, 101);
+            this.lblSenseRain.Name = "lblSenseRain";
+            this.lblSenseRain.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseRain.TabIndex = 9;
+            this.lblSenseRain.Text = "000";
+            // 
+            // lblSenseGas
+            // 
+            this.lblSenseGas.AutoSize = true;
+            this.lblSenseGas.Location = new System.Drawing.Point(271, 209);
+            this.lblSenseGas.Name = "lblSenseGas";
+            this.lblSenseGas.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseGas.TabIndex = 10;
+            this.lblSenseGas.Text = "000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(100, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nivel de Luz";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(264, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Humedad en la Tierra";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(464, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Humedad en el Ambiente";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(271, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Nivel de Gas";
             // 
             // frmPrincipal
             // 
@@ -371,6 +459,14 @@
         private System.Windows.Forms.Label lblLevel;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label lblSensFoto;
+        private System.Windows.Forms.Label lblSenseSoil;
+        private System.Windows.Forms.Label lblSenseRain;
+        private System.Windows.Forms.Label lblSenseGas;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }
 
