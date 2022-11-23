@@ -93,7 +93,40 @@
     <None Include="Resources\ventilador6-3870285687.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\depositphotos_174335366-stock-photo-cute-cloud-rain-kawaii-face-3363758100.jpg" />
+    <None Include="Resources\Imagen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventana cerrada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventana abierta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hogar-sostenible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foco blanco encendido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foco blanco apagado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foco amarillo encendido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foco amarillo apagado.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

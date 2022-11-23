@@ -25,6 +25,8 @@ namespace Proyecto_Sistemas_Programables
             InitializeComponent();
         }
 
+        int m, mx, my;
+
         private void btnIzqVent_Click(object sender, EventArgs e)
         {
            
@@ -80,21 +82,89 @@ namespace Proyecto_Sistemas_Programables
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void PicBoxVentiladorOff_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(stateString);
+            PicBoxVentiladorOn.Visible = true;
+            PicBoxVentiladorOff.Visible = false;
         }
 
-        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        private void PicBoxVentiladorOn_Click(object sender, EventArgs e)
         {
-            string cadena = serialPort1.ReadTo("\n");
-            Thread.Sleep(500);
-            string[] aaa = cadena.Split(' ');
+            PicBoxVentiladorOn.Visible = false;
+            PicBoxVentiladorOff.Visible = true;
         }
 
-        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        private void PicBoxPuertaCerrada_Click(object sender, EventArgs e)
         {
-            serialPort1.Close();
+            PicBoxPuertaAbierta.Visible = true;
+            PicBoxPuertaCerrada.Visible = false;
+        }
+
+        private void PicBoxPuertaAbierta_Click(object sender, EventArgs e)
+        {
+            PicBoxPuertaAbierta.Visible = false;
+            PicBoxPuertaCerrada.Visible = true;
+        }
+
+        private void PicBoxVentanaCerrada_Click(object sender, EventArgs e)
+        {
+            PicBoxVentanaAbierta.Visible = true;
+            PicBoxVentanaCerrada.Visible = false;
+        }
+
+        private void PicBoxBarra_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
+        private void PicBoxBarra_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void PicBoxFocoApagado_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagado.Visible = false;
+            PicBoxLedEncendido.Visible = true;
+        }
+
+        private void PicBoxLedEncendido_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagado.Visible = true;
+            PicBoxLedEncendido.Visible = false;
+        }
+
+        private void PicBoxFocoApagadoAmarillo_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagadoAmarillo.Visible = false;
+            PicBoxEncendidoAmarillo.Visible = true;
+        }
+
+        private void PicBoxEncendidoAmarillo_Click(object sender, EventArgs e)
+        {
+            PicBoxFocoApagadoAmarillo.Visible = true;
+            PicBoxEncendidoAmarillo.Visible = false;
+        }
+
+        private void PicBoxVentanaAbierta_Click(object sender, EventArgs e)
+        {
+            PicBoxVentanaAbierta.Visible = false;
+            PicBoxVentanaCerrada.Visible = true;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
