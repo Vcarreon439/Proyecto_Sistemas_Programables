@@ -87,19 +87,36 @@ namespace Proyecto_Sistemas_Programables
 
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            string cadena = serialPort1.ReadTo("\n");
-            string[] aaa = cadena.Split(' ');
+            try
+            {
+                string cadena = serialPort1.ReadTo("\n");
+                string[] aaa = cadena.Split(' ');
 
-            Invoke(new MethodInvoker(()=>{
-                lblLevel.Text = aaa[0];
-                lblSensFoto.Text = aaa[1];
-                lblSenseSoil.Text = aaa[2];
-                lblSenseRain.Text = aaa[3];
-                lblSenseGas.Text = aaa[4];
-            }));
+                if (aaa.Count()<3)
+                {
 
-            Thread.Sleep(500);
-            
+                }
+                else
+                {
+                    Invoke(new MethodInvoker(() => {
+                        lblLevel.Text = aaa[0].Replace('@', ' ');
+                        lblSensFoto.Text = aaa[1];
+                        lblSenseSoil.Text = aaa[2];
+                        lblSenseRain.Text = aaa[3];
+                        lblSenseGas.Text = aaa[4];
+                    }));
+
+                    Thread.Sleep(500);
+                }
+            }
+            catch (System.IndexOutOfRangeException)
+            {
+                Console.WriteLine("Flujo alterno");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
