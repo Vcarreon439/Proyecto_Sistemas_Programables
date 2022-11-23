@@ -63,6 +63,16 @@ namespace Proyecto_Sistemas_Programables.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositphotos_174335366_stock_photo_cute_cloud_rain_kawaii_face_3363758100 {
+            get {
+                object obj = ResourceManager.GetObject("depositphotos_174335366-stock-photo-cute-cloud-rain-kawaii-face-3363758100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ventilador6_3870285687 {
             get {
                 object obj = ResourceManager.GetObject("ventilador6-3870285687", resourceCulture);
