@@ -50,19 +50,23 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblSenseGas = new System.Windows.Forms.Label();
+            this.lblSenseRain = new System.Windows.Forms.Label();
+            this.lblSenseSoil = new System.Windows.Forms.Label();
+            this.lblSensFoto = new System.Windows.Forms.Label();
             this.lblLevel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.lblSensFoto = new System.Windows.Forms.Label();
-            this.lblSenseSoil = new System.Windows.Forms.Label();
-            this.lblSenseRain = new System.Windows.Forms.Label();
-            this.lblSenseGas = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -75,6 +79,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -274,6 +282,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.iconPictureBox5);
+            this.tabPage2.Controls.Add(this.iconPictureBox4);
+            this.tabPage2.Controls.Add(this.iconPictureBox3);
+            this.tabPage2.Controls.Add(this.iconPictureBox2);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
@@ -293,10 +305,82 @@
             this.tabPage2.Text = " Valores";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(331, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Nivel de Gas";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(98, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Humedad en el Ambiente";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(98, 160);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Humedad en la Tierra";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(331, 86);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nivel de Luz";
+            // 
+            // lblSenseGas
+            // 
+            this.lblSenseGas.AutoSize = true;
+            this.lblSenseGas.Location = new System.Drawing.Point(331, 40);
+            this.lblSenseGas.Name = "lblSenseGas";
+            this.lblSenseGas.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseGas.TabIndex = 10;
+            this.lblSenseGas.Text = "000";
+            // 
+            // lblSenseRain
+            // 
+            this.lblSenseRain.AutoSize = true;
+            this.lblSenseRain.Location = new System.Drawing.Point(98, 39);
+            this.lblSenseRain.Name = "lblSenseRain";
+            this.lblSenseRain.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseRain.TabIndex = 9;
+            this.lblSenseRain.Text = "000";
+            // 
+            // lblSenseSoil
+            // 
+            this.lblSenseSoil.AutoSize = true;
+            this.lblSenseSoil.Location = new System.Drawing.Point(98, 183);
+            this.lblSenseSoil.Name = "lblSenseSoil";
+            this.lblSenseSoil.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseSoil.TabIndex = 8;
+            this.lblSenseSoil.Text = "000";
+            // 
+            // lblSensFoto
+            // 
+            this.lblSensFoto.AutoSize = true;
+            this.lblSensFoto.Location = new System.Drawing.Point(331, 109);
+            this.lblSensFoto.Name = "lblSensFoto";
+            this.lblSensFoto.Size = new System.Drawing.Size(25, 13);
+            this.lblSensFoto.TabIndex = 7;
+            this.lblSensFoto.Text = "000";
+            // 
             // lblLevel
             // 
             this.lblLevel.AutoSize = true;
-            this.lblLevel.Location = new System.Drawing.Point(98, 37);
+            this.lblLevel.Location = new System.Drawing.Point(98, 106);
             this.lblLevel.Name = "lblLevel";
             this.lblLevel.Size = new System.Drawing.Size(25, 13);
             this.lblLevel.TabIndex = 6;
@@ -305,7 +389,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(98, 17);
+            this.label1.Location = new System.Drawing.Point(98, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 5;
@@ -329,77 +413,61 @@
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
-            // lblSensFoto
+            // iconPictureBox2
             // 
-            this.lblSensFoto.AutoSize = true;
-            this.lblSensFoto.Location = new System.Drawing.Point(100, 124);
-            this.lblSensFoto.Name = "lblSensFoto";
-            this.lblSensFoto.Size = new System.Drawing.Size(25, 13);
-            this.lblSensFoto.TabIndex = 7;
-            this.lblSensFoto.Text = "000";
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.PersonWalking;
+            this.iconPictureBox2.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 51;
+            this.iconPictureBox2.Location = new System.Drawing.Point(24, 86);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(68, 51);
+            this.iconPictureBox2.TabIndex = 15;
+            this.iconPictureBox2.TabStop = false;
             // 
-            // lblSenseSoil
+            // iconPictureBox3
             // 
-            this.lblSenseSoil.AutoSize = true;
-            this.lblSenseSoil.Location = new System.Drawing.Point(264, 124);
-            this.lblSenseSoil.Name = "lblSenseSoil";
-            this.lblSenseSoil.Size = new System.Drawing.Size(25, 13);
-            this.lblSenseSoil.TabIndex = 8;
-            this.lblSenseSoil.Text = "000";
+            this.iconPictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Leaf;
+            this.iconPictureBox3.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 51;
+            this.iconPictureBox3.Location = new System.Drawing.Point(24, 160);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(68, 51);
+            this.iconPictureBox3.TabIndex = 16;
+            this.iconPictureBox3.TabStop = false;
             // 
-            // lblSenseRain
+            // iconPictureBox4
             // 
-            this.lblSenseRain.AutoSize = true;
-            this.lblSenseRain.Location = new System.Drawing.Point(464, 101);
-            this.lblSenseRain.Name = "lblSenseRain";
-            this.lblSenseRain.Size = new System.Drawing.Size(25, 13);
-            this.lblSenseRain.TabIndex = 9;
-            this.lblSenseRain.Text = "000";
+            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.GasPump;
+            this.iconPictureBox4.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 51;
+            this.iconPictureBox4.Location = new System.Drawing.Point(257, 17);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(68, 51);
+            this.iconPictureBox4.TabIndex = 17;
+            this.iconPictureBox4.TabStop = false;
             // 
-            // lblSenseGas
+            // iconPictureBox5
             // 
-            this.lblSenseGas.AutoSize = true;
-            this.lblSenseGas.Location = new System.Drawing.Point(271, 209);
-            this.lblSenseGas.Name = "lblSenseGas";
-            this.lblSenseGas.Size = new System.Drawing.Size(25, 13);
-            this.lblSenseGas.TabIndex = 10;
-            this.lblSenseGas.Text = "000";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(100, 101);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Nivel de Luz";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Humedad en la Tierra";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(464, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Humedad en el Ambiente";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(271, 186);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Nivel de Gas";
+            this.iconPictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.iconPictureBox5.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.IconSize = 51;
+            this.iconPictureBox5.Location = new System.Drawing.Point(257, 86);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(68, 51);
+            this.iconPictureBox5.TabIndex = 18;
+            this.iconPictureBox5.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -427,6 +495,10 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -467,6 +539,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
     }
 }
 
