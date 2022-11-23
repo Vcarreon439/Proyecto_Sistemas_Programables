@@ -16,5 +16,10 @@ namespace Proyecto_Sistemas_Programables
         {
             InitializeComponent();
         }
+
+        private void btnIzqVent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
