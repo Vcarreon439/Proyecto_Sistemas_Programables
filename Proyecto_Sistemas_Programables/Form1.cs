@@ -88,8 +88,14 @@ namespace Proyecto_Sistemas_Programables
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             string cadena = serialPort1.ReadTo("\n");
-            Thread.Sleep(500);
             string[] aaa = cadena.Split(' ');
+
+            Invoke(new MethodInvoker(()=>{
+                lblLevel.Text = aaa[0];
+            }));
+
+            Thread.Sleep(500);
+            
         }
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
