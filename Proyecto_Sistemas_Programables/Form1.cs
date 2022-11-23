@@ -7,6 +7,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Management;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -57,6 +58,32 @@ namespace Proyecto_Sistemas_Programables
         {
             var decripcion = Dispositivos_COM[$"{cboPorts.Text}"];
             lblPortDesc.Text = decripcion.ToString();
+        }
+
+        private void btnConexion_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                SerialPort serialPort = new SerialPort();
+                serialPort.PortName = cboPorts.Text;
+                serialPort.BaudRate = 9600;
+                serialPort.Open();
+
+                serialPort.Write("x");
+
+                string a = serialPort.ReadExisting();
+                Console.WriteLine(a);
+                Thread.Sleep(3000);
+
+                serialPort.Write("p");
+
+                serialPort.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

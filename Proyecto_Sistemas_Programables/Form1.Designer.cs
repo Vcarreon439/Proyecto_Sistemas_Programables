@@ -51,6 +51,7 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.lblPortDesc = new System.Windows.Forms.Label();
+            this.btnConexion = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -228,6 +229,7 @@
             // 
             // tbConfig
             // 
+            this.tbConfig.Controls.Add(this.btnConexion);
             this.tbConfig.Controls.Add(this.lblPortDesc);
             this.tbConfig.Controls.Add(this.cboPorts);
             this.tbConfig.Location = new System.Drawing.Point(4, 22);
@@ -255,6 +257,16 @@
             this.lblPortDesc.Name = "lblPortDesc";
             this.lblPortDesc.Size = new System.Drawing.Size(0, 13);
             this.lblPortDesc.TabIndex = 1;
+            // 
+            // btnConexion
+            // 
+            this.btnConexion.Location = new System.Drawing.Point(207, 25);
+            this.btnConexion.Name = "btnConexion";
+            this.btnConexion.Size = new System.Drawing.Size(126, 23);
+            this.btnConexion.TabIndex = 2;
+            this.btnConexion.Text = "Probar conexion";
+            this.btnConexion.UseVisualStyleBackColor = true;
+            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
             // 
             // frmPrincipal
             // 
@@ -306,6 +318,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label lblPortDesc;
+        private System.Windows.Forms.Button btnConexion;
     }
 }
 
