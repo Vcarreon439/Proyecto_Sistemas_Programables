@@ -35,53 +35,46 @@
             this.lblPortDesc = new System.Windows.Forms.Label();
             this.cboPorts = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.PicBoxVentiladorOff = new System.Windows.Forms.PictureBox();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.btnEnviar = new System.Windows.Forms.Button();
             this.txtMostrar = new System.Windows.Forms.TextBox();
-            this.PicBoxPuertaCerrada = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.btnBienvenido = new System.Windows.Forms.Button();
-            this.btnAlerta = new System.Windows.Forms.Button();
-            this.btnCumpleaños = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnDer = new System.Windows.Forms.Button();
             this.btnIzqVent = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.PicBoxVentiladorOn = new System.Windows.Forms.PictureBox();
-            this.PicBoxPuertaAbierta = new System.Windows.Forms.PictureBox();
-            this.PicBoxVentanaCerrada = new System.Windows.Forms.PictureBox();
-            this.PicBoxVentanaAbierta = new System.Windows.Forms.PictureBox();
-            this.PicBoxFocoApagado = new System.Windows.Forms.PictureBox();
-            this.PicBoxLedEncendido = new System.Windows.Forms.PictureBox();
-            this.PicBoxFocoApagadoAmarillo = new System.Windows.Forms.PictureBox();
-            this.PicBoxEncendidoAmarillo = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblLevel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.lblSensFoto = new System.Windows.Forms.Label();
+            this.lblSenseSoil = new System.Windows.Forms.Label();
+            this.lblSenseRain = new System.Windows.Forms.Label();
+            this.lblSenseGas = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PicBoxBarra = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentiladorOff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxPuertaCerrada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentiladorOn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxPuertaAbierta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentanaCerrada)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentanaAbierta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxFocoApagado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLedEncendido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxFocoApagadoAmarillo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxEncendidoAmarillo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxBarra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -89,10 +82,10 @@
             this.tabControl1.Controls.Add(this.tbConfig);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(8, 37);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(601, 390);
+            this.tabControl1.Size = new System.Drawing.Size(677, 390);
             this.tabControl1.TabIndex = 0;
             // 
             // tbConfig
@@ -103,7 +96,7 @@
             this.tbConfig.Location = new System.Drawing.Point(4, 22);
             this.tbConfig.Name = "tbConfig";
             this.tbConfig.Padding = new System.Windows.Forms.Padding(3);
-            this.tbConfig.Size = new System.Drawing.Size(593, 364);
+            this.tbConfig.Size = new System.Drawing.Size(669, 364);
             this.tbConfig.TabIndex = 2;
             this.tbConfig.Text = "Configuración";
             this.tbConfig.UseVisualStyleBackColor = true;
@@ -138,376 +131,303 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Controls.Add(this.PicBoxVentiladorOff);
             this.tabPage1.Controls.Add(this.trackBar2);
             this.tabPage1.Controls.Add(this.btnEnviar);
             this.tabPage1.Controls.Add(this.txtMostrar);
-            this.tabPage1.Controls.Add(this.PicBoxPuertaCerrada);
             this.tabPage1.Controls.Add(this.trackBar1);
-            this.tabPage1.Controls.Add(this.btnBienvenido);
-            this.tabPage1.Controls.Add(this.btnAlerta);
-            this.tabPage1.Controls.Add(this.btnCumpleaños);
+            this.tabPage1.Controls.Add(this.button5);
+            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.btnDer);
             this.tabPage1.Controls.Add(this.btnIzqVent);
+            this.tabPage1.Controls.Add(this.pictureBox5);
+            this.tabPage1.Controls.Add(this.pictureBox4);
+            this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.PicBoxVentiladorOn);
-            this.tabPage1.Controls.Add(this.PicBoxPuertaAbierta);
-            this.tabPage1.Controls.Add(this.PicBoxVentanaCerrada);
-            this.tabPage1.Controls.Add(this.PicBoxVentanaAbierta);
-            this.tabPage1.Controls.Add(this.PicBoxFocoApagado);
-            this.tabPage1.Controls.Add(this.PicBoxLedEncendido);
-            this.tabPage1.Controls.Add(this.PicBoxFocoApagadoAmarillo);
-            this.tabPage1.Controls.Add(this.PicBoxEncendidoAmarillo);
-            this.tabPage1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(593, 364);
+            this.tabPage1.Size = new System.Drawing.Size(669, 364);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Actuadores y Sensores";
-            // 
-            // PicBoxVentiladorOff
-            // 
-            this.PicBoxVentiladorOff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicBoxVentiladorOff.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.Imagen1;
-            this.PicBoxVentiladorOff.Location = new System.Drawing.Point(15, 15);
-            this.PicBoxVentiladorOff.Name = "PicBoxVentiladorOff";
-            this.PicBoxVentiladorOff.Size = new System.Drawing.Size(67, 90);
-            this.PicBoxVentiladorOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PicBoxVentiladorOff.TabIndex = 14;
-            this.PicBoxVentiladorOff.TabStop = false;
-            this.PicBoxVentiladorOff.Click += new System.EventHandler(this.PicBoxVentiladorOff_Click);
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(158, 211);
+            this.trackBar2.Location = new System.Drawing.Point(147, 212);
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(322, 45);
             this.trackBar2.TabIndex = 13;
             // 
             // btnEnviar
             // 
-            this.btnEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviar.Location = new System.Drawing.Point(434, 307);
+            this.btnEnviar.Location = new System.Drawing.Point(572, 56);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 23);
             this.btnEnviar.TabIndex = 12;
             this.btnEnviar.Text = "Enviar";
-            this.btnEnviar.UseVisualStyleBackColor = false;
+            this.btnEnviar.UseVisualStyleBackColor = true;
             // 
             // txtMostrar
             // 
-            this.txtMostrar.Location = new System.Drawing.Point(63, 281);
+            this.txtMostrar.Location = new System.Drawing.Point(406, 30);
             this.txtMostrar.Name = "txtMostrar";
-            this.txtMostrar.Size = new System.Drawing.Size(446, 20);
+            this.txtMostrar.Size = new System.Drawing.Size(241, 20);
             this.txtMostrar.TabIndex = 11;
-            // 
-            // PicBoxPuertaCerrada
-            // 
-            this.PicBoxPuertaCerrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicBoxPuertaCerrada.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.Imagen6;
-            this.PicBoxPuertaCerrada.Location = new System.Drawing.Point(497, 17);
-            this.PicBoxPuertaCerrada.Name = "PicBoxPuertaCerrada";
-            this.PicBoxPuertaCerrada.Size = new System.Drawing.Size(75, 94);
-            this.PicBoxPuertaCerrada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxPuertaCerrada.TabIndex = 10;
-            this.PicBoxPuertaCerrada.TabStop = false;
-            this.PicBoxPuertaCerrada.Click += new System.EventHandler(this.PicBoxPuertaCerrada_Click);
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(158, 141);
+            this.trackBar1.Location = new System.Drawing.Point(147, 152);
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(322, 45);
             this.trackBar1.TabIndex = 9;
             // 
-            // btnBienvenido
+            // button5
             // 
-            this.btnBienvenido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnBienvenido.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBienvenido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnBienvenido.Location = new System.Drawing.Point(279, 15);
-            this.btnBienvenido.Name = "btnBienvenido";
-            this.btnBienvenido.Size = new System.Drawing.Size(87, 23);
-            this.btnBienvenido.TabIndex = 8;
-            this.btnBienvenido.Text = "Bienvenido";
-            this.btnBienvenido.UseVisualStyleBackColor = false;
+            this.button5.Location = new System.Drawing.Point(147, 108);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // btnAlerta
+            // button4
             // 
-            this.btnAlerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnAlerta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlerta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlerta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAlerta.Location = new System.Drawing.Point(279, 46);
-            this.btnAlerta.Name = "btnAlerta";
-            this.btnAlerta.Size = new System.Drawing.Size(87, 23);
-            this.btnAlerta.TabIndex = 7;
-            this.btnAlerta.Text = "Alerta";
-            this.btnAlerta.UseVisualStyleBackColor = false;
+            this.button4.Location = new System.Drawing.Point(236, 108);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // btnCumpleaños
+            // button3
             // 
-            this.btnCumpleaños.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnCumpleaños.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCumpleaños.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCumpleaños.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCumpleaños.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCumpleaños.Location = new System.Drawing.Point(279, 79);
-            this.btnCumpleaños.Name = "btnCumpleaños";
-            this.btnCumpleaños.Size = new System.Drawing.Size(87, 23);
-            this.btnCumpleaños.TabIndex = 6;
-            this.btnCumpleaños.Text = "Cumpleaños";
-            this.btnCumpleaños.UseVisualStyleBackColor = false;
+            this.button3.Location = new System.Drawing.Point(331, 109);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // btnDer
             // 
-            this.btnDer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnDer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnDer.Location = new System.Drawing.Point(95, 46);
+            this.btnDer.Location = new System.Drawing.Point(88, 44);
             this.btnDer.Name = "btnDer";
             this.btnDer.Size = new System.Drawing.Size(75, 23);
             this.btnDer.TabIndex = 5;
             this.btnDer.Text = "Derecha";
-            this.btnDer.UseVisualStyleBackColor = false;
+            this.btnDer.UseVisualStyleBackColor = true;
             // 
             // btnIzqVent
             // 
-            this.btnIzqVent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnIzqVent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnIzqVent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzqVent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzqVent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnIzqVent.Location = new System.Drawing.Point(95, 17);
+            this.btnIzqVent.Location = new System.Drawing.Point(88, 15);
             this.btnIzqVent.Name = "btnIzqVent";
             this.btnIzqVent.Size = new System.Drawing.Size(75, 23);
             this.btnIzqVent.TabIndex = 4;
             this.btnIzqVent.Text = "Izquierda";
-            this.btnIzqVent.UseVisualStyleBackColor = false;
+            this.btnIzqVent.UseVisualStyleBackColor = true;
             this.btnIzqVent.Click += new System.EventHandler(this.btnIzqVent_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(359, 287);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox5.TabIndex = 10;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(147, 287);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(15, 233);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(187, 15);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 133);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 87);
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // PicBoxVentiladorOn
+            // pictureBox1
             // 
-            this.PicBoxVentiladorOn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicBoxVentiladorOn.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.ventilador6_3870285687;
-            this.PicBoxVentiladorOn.Location = new System.Drawing.Point(15, 15);
-            this.PicBoxVentiladorOn.Name = "PicBoxVentiladorOn";
-            this.PicBoxVentiladorOn.Size = new System.Drawing.Size(67, 90);
-            this.PicBoxVentiladorOn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.PicBoxVentiladorOn.TabIndex = 0;
-            this.PicBoxVentiladorOn.TabStop = false;
-            this.PicBoxVentiladorOn.Click += new System.EventHandler(this.PicBoxVentiladorOn_Click);
-            // 
-            // PicBoxPuertaAbierta
-            // 
-            this.PicBoxPuertaAbierta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicBoxPuertaAbierta.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.Imagen5;
-            this.PicBoxPuertaAbierta.Location = new System.Drawing.Point(499, 17);
-            this.PicBoxPuertaAbierta.Name = "PicBoxPuertaAbierta";
-            this.PicBoxPuertaAbierta.Size = new System.Drawing.Size(73, 94);
-            this.PicBoxPuertaAbierta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxPuertaAbierta.TabIndex = 15;
-            this.PicBoxPuertaAbierta.TabStop = false;
-            this.PicBoxPuertaAbierta.Click += new System.EventHandler(this.PicBoxPuertaAbierta_Click);
-            // 
-            // PicBoxVentanaCerrada
-            // 
-            this.PicBoxVentanaCerrada.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicBoxVentanaCerrada.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.ventana_cerrada;
-            this.PicBoxVentanaCerrada.Location = new System.Drawing.Point(383, 17);
-            this.PicBoxVentanaCerrada.Name = "PicBoxVentanaCerrada";
-            this.PicBoxVentanaCerrada.Size = new System.Drawing.Size(75, 92);
-            this.PicBoxVentanaCerrada.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxVentanaCerrada.TabIndex = 16;
-            this.PicBoxVentanaCerrada.TabStop = false;
-            this.PicBoxVentanaCerrada.Click += new System.EventHandler(this.PicBoxVentanaCerrada_Click);
-            // 
-            // PicBoxVentanaAbierta
-            // 
-            this.PicBoxVentanaAbierta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicBoxVentanaAbierta.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.ventana_abierta;
-            this.PicBoxVentanaAbierta.Location = new System.Drawing.Point(383, 17);
-            this.PicBoxVentanaAbierta.Name = "PicBoxVentanaAbierta";
-            this.PicBoxVentanaAbierta.Size = new System.Drawing.Size(75, 92);
-            this.PicBoxVentanaAbierta.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxVentanaAbierta.TabIndex = 17;
-            this.PicBoxVentanaAbierta.TabStop = false;
-            this.PicBoxVentanaAbierta.Click += new System.EventHandler(this.PicBoxVentanaAbierta_Click);
-            // 
-            // PicBoxFocoApagado
-            // 
-            this.PicBoxFocoApagado.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.foco_blanco_apagado;
-            this.PicBoxFocoApagado.Location = new System.Drawing.Point(88, 121);
-            this.PicBoxFocoApagado.Name = "PicBoxFocoApagado";
-            this.PicBoxFocoApagado.Size = new System.Drawing.Size(75, 65);
-            this.PicBoxFocoApagado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxFocoApagado.TabIndex = 19;
-            this.PicBoxFocoApagado.TabStop = false;
-            this.PicBoxFocoApagado.Click += new System.EventHandler(this.PicBoxFocoApagado_Click);
-            // 
-            // PicBoxLedEncendido
-            // 
-            this.PicBoxLedEncendido.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.foco_blanco_encendido;
-            this.PicBoxLedEncendido.Location = new System.Drawing.Point(88, 121);
-            this.PicBoxLedEncendido.Name = "PicBoxLedEncendido";
-            this.PicBoxLedEncendido.Size = new System.Drawing.Size(75, 65);
-            this.PicBoxLedEncendido.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxLedEncendido.TabIndex = 2;
-            this.PicBoxLedEncendido.TabStop = false;
-            this.PicBoxLedEncendido.Click += new System.EventHandler(this.PicBoxLedEncendido_Click);
-            // 
-            // PicBoxFocoApagadoAmarillo
-            // 
-            this.PicBoxFocoApagadoAmarillo.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.foco_amarillo_apagado;
-            this.PicBoxFocoApagadoAmarillo.Location = new System.Drawing.Point(109, 197);
-            this.PicBoxFocoApagadoAmarillo.Name = "PicBoxFocoApagadoAmarillo";
-            this.PicBoxFocoApagadoAmarillo.Size = new System.Drawing.Size(29, 59);
-            this.PicBoxFocoApagadoAmarillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxFocoApagadoAmarillo.TabIndex = 23;
-            this.PicBoxFocoApagadoAmarillo.TabStop = false;
-            this.PicBoxFocoApagadoAmarillo.Click += new System.EventHandler(this.PicBoxFocoApagadoAmarillo_Click);
-            // 
-            // PicBoxEncendidoAmarillo
-            // 
-            this.PicBoxEncendidoAmarillo.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.foco_amarillo_encendido;
-            this.PicBoxEncendidoAmarillo.Location = new System.Drawing.Point(109, 197);
-            this.PicBoxEncendidoAmarillo.Name = "PicBoxEncendidoAmarillo";
-            this.PicBoxEncendidoAmarillo.Size = new System.Drawing.Size(29, 59);
-            this.PicBoxEncendidoAmarillo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxEncendidoAmarillo.TabIndex = 22;
-            this.PicBoxEncendidoAmarillo.TabStop = false;
-            this.PicBoxEncendidoAmarillo.Click += new System.EventHandler(this.PicBoxEncendidoAmarillo_Click);
+            this.pictureBox1.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.ventilador6_3870285687;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(67, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Controls.Add(this.lblSenseGas);
+            this.tabPage2.Controls.Add(this.lblSenseRain);
+            this.tabPage2.Controls.Add(this.lblSenseSoil);
+            this.tabPage2.Controls.Add(this.lblSensFoto);
+            this.tabPage2.Controls.Add(this.lblLevel);
+            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.iconPictureBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(593, 364);
+            this.tabPage2.Size = new System.Drawing.Size(669, 364);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " Valores";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lblLevel
+            // 
+            this.lblLevel.AutoSize = true;
+            this.lblLevel.Location = new System.Drawing.Point(98, 37);
+            this.lblLevel.Name = "lblLevel";
+            this.lblLevel.Size = new System.Drawing.Size(25, 13);
+            this.lblLevel.TabIndex = 6;
+            this.lblLevel.Text = "000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(98, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Sensor de Precencia";
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cloud;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 55;
+            this.iconPictureBox1.Location = new System.Drawing.Point(24, 17);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(68, 55);
+            this.iconPictureBox1.TabIndex = 4;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
+            // lblSensFoto
+            // 
+            this.lblSensFoto.AutoSize = true;
+            this.lblSensFoto.Location = new System.Drawing.Point(100, 124);
+            this.lblSensFoto.Name = "lblSensFoto";
+            this.lblSensFoto.Size = new System.Drawing.Size(25, 13);
+            this.lblSensFoto.TabIndex = 7;
+            this.lblSensFoto.Text = "000";
+            // 
+            // lblSenseSoil
+            // 
+            this.lblSenseSoil.AutoSize = true;
+            this.lblSenseSoil.Location = new System.Drawing.Point(264, 124);
+            this.lblSenseSoil.Name = "lblSenseSoil";
+            this.lblSenseSoil.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseSoil.TabIndex = 8;
+            this.lblSenseSoil.Text = "000";
+            // 
+            // lblSenseRain
+            // 
+            this.lblSenseRain.AutoSize = true;
+            this.lblSenseRain.Location = new System.Drawing.Point(464, 101);
+            this.lblSenseRain.Name = "lblSenseRain";
+            this.lblSenseRain.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseRain.TabIndex = 9;
+            this.lblSenseRain.Text = "000";
+            // 
+            // lblSenseGas
+            // 
+            this.lblSenseGas.AutoSize = true;
+            this.lblSenseGas.Location = new System.Drawing.Point(271, 209);
+            this.lblSenseGas.Name = "lblSenseGas";
+            this.lblSenseGas.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseGas.TabIndex = 10;
+            this.lblSenseGas.Text = "000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(100, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Nivel de Luz";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(43, 8);
+            this.label3.Location = new System.Drawing.Point(264, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Smart Home";
+            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Humedad en la Tierra";
             // 
-            // btnCerrar
+            // label4
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCerrar.Location = new System.Drawing.Point(590, 3);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(24, 23);
-            this.btnCerrar.TabIndex = 14;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(464, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Humedad en el Ambiente";
             // 
-            // pictureBox1
+            // label5
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.pictureBox1.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.hogar_sostenible;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // PicBoxBarra
-            // 
-            this.PicBoxBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.PicBoxBarra.Location = new System.Drawing.Point(-2, 0);
-            this.PicBoxBarra.Name = "PicBoxBarra";
-            this.PicBoxBarra.Size = new System.Drawing.Size(641, 31);
-            this.PicBoxBarra.TabIndex = 13;
-            this.PicBoxBarra.TabStop = false;
-            this.PicBoxBarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseDown);
-            this.PicBoxBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseMove);
-            this.PicBoxBarra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseUp);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Proyecto_Sistemas_Programables.Properties.Resources.Imagen6;
-            this.pictureBox3.Location = new System.Drawing.Point(259, 135);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 94);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(271, 186);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Nivel de Gas";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(619, 438);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.PicBoxBarra);
+            this.ClientSize = new System.Drawing.Size(701, 414);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.tabControl1.ResumeLayout(false);
             this.tbConfig.ResumeLayout(false);
             this.tbConfig.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentiladorOff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxPuertaCerrada)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentiladorOn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxPuertaAbierta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentanaCerrada)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentanaAbierta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxFocoApagado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLedEncendido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxFocoApagadoAmarillo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxEncendidoAmarillo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicBoxBarra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -518,16 +438,17 @@
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.Button btnEnviar;
         private System.Windows.Forms.TextBox txtMostrar;
-        private System.Windows.Forms.PictureBox PicBoxPuertaCerrada;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Button btnBienvenido;
-        private System.Windows.Forms.Button btnAlerta;
-        private System.Windows.Forms.Button btnCumpleaños;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnDer;
         private System.Windows.Forms.Button btnIzqVent;
-        private System.Windows.Forms.PictureBox PicBoxLedEncendido;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox PicBoxVentiladorOn;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tbConfig;
         private System.Windows.Forms.ComboBox cboPorts;
@@ -535,18 +456,17 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Label lblPortDesc;
         private System.Windows.Forms.Button btnConexion;
-        private System.Windows.Forms.PictureBox PicBoxVentiladorOff;
-        private System.Windows.Forms.PictureBox PicBoxPuertaAbierta;
-        private System.Windows.Forms.PictureBox PicBoxVentanaCerrada;
-        private System.Windows.Forms.PictureBox PicBoxVentanaAbierta;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblLevel;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.Label lblSensFoto;
+        private System.Windows.Forms.Label lblSenseSoil;
+        private System.Windows.Forms.Label lblSenseRain;
+        private System.Windows.Forms.Label lblSenseGas;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.PictureBox PicBoxBarra;
-        private System.Windows.Forms.PictureBox PicBoxFocoApagado;
-        private System.Windows.Forms.PictureBox PicBoxEncendidoAmarillo;
-        private System.Windows.Forms.PictureBox PicBoxFocoApagadoAmarillo;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

@@ -16,13 +16,14 @@ namespace Proyecto_Sistemas_Programables
     public partial class frmPrincipal : Form
     {
         Dictionary<string, string> Dispositivos_COM = new Dictionary<string, string>();
+        string stateString="";
+
+
 
         public frmPrincipal()
         {
             InitializeComponent();
         }
-
-        int m, mx, my;
 
         private void btnIzqVent_Click(object sender, EventArgs e)
         {
@@ -67,20 +68,11 @@ namespace Proyecto_Sistemas_Programables
 
             try
             {
-                SerialPort serialPort = new SerialPort();
-                serialPort.PortName = cboPorts.Text;
-                serialPort.BaudRate = 9600;
-                serialPort.Open();
+                serialPort1.PortName = cboPorts.Text;
+                serialPort1.BaudRate = 9600;
+                serialPort1.Open();
 
-                serialPort.Write("x");
-
-                string a = serialPort.ReadExisting();
-                Console.WriteLine(a);
-                Thread.Sleep(3000);
-
-                serialPort.Write("p");
-
-                serialPort.Close();
+                
             }
             catch (Exception ex)
             {
@@ -88,89 +80,48 @@ namespace Proyecto_Sistemas_Programables
             }
         }
 
-        private void PicBoxVentiladorOff_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            PicBoxVentiladorOn.Visible = true;
-            PicBoxVentiladorOff.Visible = false;
+            Console.WriteLine(stateString);
         }
 
-        private void PicBoxVentiladorOn_Click(object sender, EventArgs e)
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            PicBoxVentiladorOn.Visible = false;
-            PicBoxVentiladorOff.Visible = true;
-        }
-
-        private void PicBoxPuertaCerrada_Click(object sender, EventArgs e)
-        {
-            PicBoxPuertaAbierta.Visible = true;
-            PicBoxPuertaCerrada.Visible = false;
-        }
-
-        private void PicBoxPuertaAbierta_Click(object sender, EventArgs e)
-        {
-            PicBoxPuertaAbierta.Visible = false;
-            PicBoxPuertaCerrada.Visible = true;
-        }
-
-        private void PicBoxVentanaCerrada_Click(object sender, EventArgs e)
-        {
-            PicBoxVentanaAbierta.Visible = true;
-            PicBoxVentanaCerrada.Visible = false;
-        }
-
-        private void PicBoxBarra_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (m == 1)
+            try
             {
-                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+                string cadena = serialPort1.ReadTo("\n");
+                string[] aaa = cadena.Split(' ');
+
+                if (aaa.Count()<3)
+                {
+
+                }
+                else
+                {
+                    Invoke(new MethodInvoker(() => {
+                        lblLevel.Text = aaa[0].Replace('@', ' ');
+                        lblSensFoto.Text = aaa[1];
+                        lblSenseSoil.Text = aaa[2];
+                        lblSenseRain.Text = aaa[3];
+                        lblSenseGas.Text = aaa[4];
+                    }));
+
+                    Thread.Sleep(500);
+                }
+            }
+            catch (System.IndexOutOfRangeException)
+            {
+                Console.WriteLine("Flujo alterno");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
-        private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            m = 0;
-        }
-
-        private void PicBoxBarra_MouseDown(object sender, MouseEventArgs e)
-        {
-            m = 1;
-            mx = e.X;
-            my = e.Y;
-        }
-
-        private void PicBoxFocoApagado_Click(object sender, EventArgs e)
-        {
-            PicBoxFocoApagado.Visible = false;
-            PicBoxLedEncendido.Visible = true;
-        }
-
-        private void PicBoxLedEncendido_Click(object sender, EventArgs e)
-        {
-            PicBoxFocoApagado.Visible = true;
-            PicBoxLedEncendido.Visible = false;
-        }
-
-        private void PicBoxFocoApagadoAmarillo_Click(object sender, EventArgs e)
-        {
-            PicBoxFocoApagadoAmarillo.Visible = false;
-            PicBoxEncendidoAmarillo.Visible = true;
-        }
-
-        private void PicBoxEncendidoAmarillo_Click(object sender, EventArgs e)
-        {
-            PicBoxFocoApagadoAmarillo.Visible = true;
-            PicBoxEncendidoAmarillo.Visible = false;
-        }
-
-        private void PicBoxVentanaAbierta_Click(object sender, EventArgs e)
-        {
-            PicBoxVentanaAbierta.Visible = false;
-            PicBoxVentanaCerrada.Visible = true;
-        }
-
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
+            serialPort1.Close();
         }
     }
 }
