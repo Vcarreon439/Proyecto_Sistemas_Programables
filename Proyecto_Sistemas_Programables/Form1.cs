@@ -26,6 +26,8 @@ namespace Proyecto_Sistemas_Programables
             InitializeComponent();
         }
 
+        int m, mx, my;
+
         private void btnIzqVent_Click(object sender, EventArgs e)
         {
            
@@ -275,6 +277,26 @@ namespace Proyecto_Sistemas_Programables
         private void cboPorts_Enter(object sender, EventArgs e)
         {
             CargarPuertos();
+        }
+
+        private void PicBoxBarra_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+
+        private void PicBoxBarra_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
         }
     }
 }
