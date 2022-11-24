@@ -276,7 +276,7 @@ namespace Proyecto_Sistemas_Programables
 
         private void cboPorts_Enter(object sender, EventArgs e)
         {
-            CargarPuertos();
+
         }
 
         private void PicBoxBarra_MouseDown(object sender, MouseEventArgs e)
