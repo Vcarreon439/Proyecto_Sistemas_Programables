@@ -35,6 +35,7 @@
             this.lblPortDesc = new System.Windows.Forms.Label();
             this.cboPorts = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnDetener = new System.Windows.Forms.Button();
             this.PicBoxVentiladorOff = new System.Windows.Forms.PictureBox();
             this.trcBrAmarillo = new System.Windows.Forms.TrackBar();
             this.btnEnviar = new System.Windows.Forms.Button();
@@ -77,7 +78,8 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.PicBoxBarra = new System.Windows.Forms.PictureBox();
-            this.btnDetener = new System.Windows.Forms.Button();
+            this.btnAbrirConexion = new System.Windows.Forms.Button();
+            this.btnCerrarConexion = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -117,6 +119,8 @@
             // 
             // tbConfig
             // 
+            this.tbConfig.Controls.Add(this.btnCerrarConexion);
+            this.tbConfig.Controls.Add(this.btnAbrirConexion);
             this.tbConfig.Controls.Add(this.btnConexion);
             this.tbConfig.Controls.Add(this.lblPortDesc);
             this.tbConfig.Controls.Add(this.cboPorts);
@@ -155,6 +159,7 @@
             this.cboPorts.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cboPorts, "Seleccione el puerto correspondiente a su Arduino");
             this.cboPorts.SelectedIndexChanged += new System.EventHandler(this.cboPorts_SelectedIndexChanged);
+            this.cboPorts.Enter += new System.EventHandler(this.cboPorts_Enter);
             // 
             // tabPage1
             // 
@@ -186,6 +191,21 @@
             this.tabPage1.Size = new System.Drawing.Size(587, 364);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Actuadores y Sensores";
+            // 
+            // btnDetener
+            // 
+            this.btnDetener.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnDetener.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetener.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetener.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnDetener.Location = new System.Drawing.Point(95, 89);
+            this.btnDetener.Name = "btnDetener";
+            this.btnDetener.Size = new System.Drawing.Size(75, 23);
+            this.btnDetener.TabIndex = 44;
+            this.btnDetener.Text = "Detener";
+            this.btnDetener.UseVisualStyleBackColor = false;
+            this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
             // 
             // PicBoxVentiladorOff
             // 
@@ -655,20 +675,25 @@
             this.PicBoxBarra.TabIndex = 17;
             this.PicBoxBarra.TabStop = false;
             // 
-            // btnDetener
+            // btnAbrirConexion
             // 
-            this.btnDetener.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnDetener.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDetener.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDetener.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetener.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnDetener.Location = new System.Drawing.Point(95, 89);
-            this.btnDetener.Name = "btnDetener";
-            this.btnDetener.Size = new System.Drawing.Size(75, 23);
-            this.btnDetener.TabIndex = 44;
-            this.btnDetener.Text = "Detener";
-            this.btnDetener.UseVisualStyleBackColor = false;
-            this.btnDetener.Click += new System.EventHandler(this.btnDetener_Click);
+            this.btnAbrirConexion.Location = new System.Drawing.Point(30, 81);
+            this.btnAbrirConexion.Name = "btnAbrirConexion";
+            this.btnAbrirConexion.Size = new System.Drawing.Size(126, 23);
+            this.btnAbrirConexion.TabIndex = 3;
+            this.btnAbrirConexion.Text = "Abrir Conexion";
+            this.btnAbrirConexion.UseVisualStyleBackColor = true;
+            this.btnAbrirConexion.Click += new System.EventHandler(this.btnAbrirConexion_Click);
+            // 
+            // btnCerrarConexion
+            // 
+            this.btnCerrarConexion.Location = new System.Drawing.Point(30, 110);
+            this.btnCerrarConexion.Name = "btnCerrarConexion";
+            this.btnCerrarConexion.Size = new System.Drawing.Size(126, 23);
+            this.btnCerrarConexion.TabIndex = 4;
+            this.btnCerrarConexion.Text = "Cerrar Conexion";
+            this.btnCerrarConexion.UseVisualStyleBackColor = true;
+            this.btnCerrarConexion.Click += new System.EventHandler(this.btnCerrarConexion_Click);
             // 
             // frmPrincipal
             // 
@@ -770,6 +795,8 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox PicBoxBarra;
         private System.Windows.Forms.Button btnDetener;
+        private System.Windows.Forms.Button btnCerrarConexion;
+        private System.Windows.Forms.Button btnAbrirConexion;
     }
 }
 
