@@ -113,6 +113,7 @@
             this.tabControl1.Controls.Add(this.tbConfig);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 37);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -380,7 +381,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(331, 17);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.Size = new System.Drawing.Size(80, 13);
             this.label5.TabIndex = 14;
             this.label5.Text = "Nivel de Gas";
             // 
@@ -389,7 +390,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(98, 17);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.Size = new System.Drawing.Size(148, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Humedad en el Ambiente";
             // 
@@ -398,7 +399,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(98, 160);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 13);
+            this.label3.Size = new System.Drawing.Size(129, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "Humedad en la Tierra";
             // 
@@ -407,7 +408,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(331, 86);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nivel de Luz";
             // 
@@ -416,7 +417,7 @@
             this.lblSenseGas.AutoSize = true;
             this.lblSenseGas.Location = new System.Drawing.Point(331, 40);
             this.lblSenseGas.Name = "lblSenseGas";
-            this.lblSenseGas.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseGas.Size = new System.Drawing.Size(28, 13);
             this.lblSenseGas.TabIndex = 10;
             this.lblSenseGas.Text = "000";
             // 
@@ -425,7 +426,7 @@
             this.lblSenseRain.AutoSize = true;
             this.lblSenseRain.Location = new System.Drawing.Point(98, 39);
             this.lblSenseRain.Name = "lblSenseRain";
-            this.lblSenseRain.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseRain.Size = new System.Drawing.Size(28, 13);
             this.lblSenseRain.TabIndex = 9;
             this.lblSenseRain.Text = "000";
             // 
@@ -434,7 +435,7 @@
             this.lblSenseSoil.AutoSize = true;
             this.lblSenseSoil.Location = new System.Drawing.Point(98, 183);
             this.lblSenseSoil.Name = "lblSenseSoil";
-            this.lblSenseSoil.Size = new System.Drawing.Size(25, 13);
+            this.lblSenseSoil.Size = new System.Drawing.Size(28, 13);
             this.lblSenseSoil.TabIndex = 8;
             this.lblSenseSoil.Text = "000";
             // 
@@ -443,7 +444,7 @@
             this.lblSensFoto.AutoSize = true;
             this.lblSensFoto.Location = new System.Drawing.Point(331, 109);
             this.lblSensFoto.Name = "lblSensFoto";
-            this.lblSensFoto.Size = new System.Drawing.Size(25, 13);
+            this.lblSensFoto.Size = new System.Drawing.Size(28, 13);
             this.lblSensFoto.TabIndex = 7;
             this.lblSensFoto.Text = "000";
             // 
@@ -452,7 +453,7 @@
             this.lblLevel.AutoSize = true;
             this.lblLevel.Location = new System.Drawing.Point(98, 106);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(25, 13);
+            this.lblLevel.Size = new System.Drawing.Size(28, 13);
             this.lblLevel.TabIndex = 6;
             this.lblLevel.Text = "000";
             // 
@@ -461,7 +462,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(98, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
+            this.label1.Size = new System.Drawing.Size(125, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Sensor de Precencia";
             // 
@@ -695,31 +696,23 @@
             // 
             // icnPctPIR
             // 
-            this.icnPctPIR.BackColor = System.Drawing.Color.Transparent;
-            this.icnPctPIR.ForeColor = System.Drawing.Color.Black;
-            this.icnPctPIR.IconChar = FontAwesome.Sharp.IconChar.PersonWalking;
-            this.icnPctPIR.IconColor = System.Drawing.Color.Black;
-            this.icnPctPIR.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icnPctPIR.IconSize = 51;
-            this.icnPctPIR.Location = new System.Drawing.Point(24, 86);
-            this.icnPctPIR.Name = "icnPctPIR";
-            this.icnPctPIR.Size = new System.Drawing.Size(68, 51);
-            this.icnPctPIR.TabIndex = 15;
-            this.icnPctPIR.TabStop = false;
+            this.btnAbrirConexion.Location = new System.Drawing.Point(30, 81);
+            this.btnAbrirConexion.Name = "btnAbrirConexion";
+            this.btnAbrirConexion.Size = new System.Drawing.Size(126, 23);
+            this.btnAbrirConexion.TabIndex = 3;
+            this.btnAbrirConexion.Text = "Abrir Conexion";
+            this.btnAbrirConexion.UseVisualStyleBackColor = true;
+            this.btnAbrirConexion.Click += new System.EventHandler(this.btnAbrirConexion_Click);
             // 
-            // iconPictureBox1
+            // btnCerrarConexion
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cloud;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 55;
-            this.iconPictureBox1.Location = new System.Drawing.Point(24, 17);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(68, 55);
-            this.iconPictureBox1.TabIndex = 4;
-            this.iconPictureBox1.TabStop = false;
+            this.btnCerrarConexion.Location = new System.Drawing.Point(30, 110);
+            this.btnCerrarConexion.Name = "btnCerrarConexion";
+            this.btnCerrarConexion.Size = new System.Drawing.Size(126, 23);
+            this.btnCerrarConexion.TabIndex = 4;
+            this.btnCerrarConexion.Text = "Cerrar Conexion";
+            this.btnCerrarConexion.UseVisualStyleBackColor = true;
+            this.btnCerrarConexion.Click += new System.EventHandler(this.btnCerrarConexion_Click);
             // 
             // frmPrincipal
             // 
