@@ -566,12 +566,13 @@
             // 
             this.icnPctPIR.BackColor = System.Drawing.Color.Transparent;
             this.icnPctPIR.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icnPctPIR.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icnPctPIR.IconChar = FontAwesome.Sharp.IconChar.PersonWalking;
             this.icnPctPIR.IconColor = System.Drawing.SystemColors.ControlText;
             this.icnPctPIR.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icnPctPIR.Location = new System.Drawing.Point(30, 67);
+            this.icnPctPIR.IconSize = 51;
+            this.icnPctPIR.Location = new System.Drawing.Point(24, 86);
             this.icnPctPIR.Name = "icnPctPIR";
-            this.icnPctPIR.Size = new System.Drawing.Size(32, 32);
+            this.icnPctPIR.Size = new System.Drawing.Size(68, 51);
             this.icnPctPIR.TabIndex = 19;
             this.icnPctPIR.TabStop = false;
             // 
@@ -669,12 +670,13 @@
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cloud;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(24, 21);
+            this.iconPictureBox1.IconSize = 47;
+            this.iconPictureBox1.Location = new System.Drawing.Point(24, 14);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.Size = new System.Drawing.Size(68, 47);
             this.iconPictureBox1.TabIndex = 20;
             this.iconPictureBox1.TabStop = false;
             // 
