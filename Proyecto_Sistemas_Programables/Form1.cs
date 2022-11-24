@@ -72,8 +72,10 @@ namespace Proyecto_Sistemas_Programables
                 serialPort1.PortName = cboPorts.Text;
                 serialPort1.BaudRate = 9600;
                 serialPort1.Open();
-
-                
+                serialPort1.Write("x");
+                serialPort1.Write("1");
+                Console.WriteLine(serialPort1.ReadTo("#"));
+                serialPort1.Close();
             }
             catch (Exception ex)
             {
@@ -258,6 +260,21 @@ namespace Proyecto_Sistemas_Programables
             serialPort1.Write("v");
             Console.WriteLine(trcBrAmarillo.Value * ((int)(255 / 10)));
             serialPort1.Write($"{trcBrAmarillo.Value*((int)(255/10))}#");
+        }
+
+        private void btnAbrirConexion_Click(object sender, EventArgs e)
+        {
+            serialPort1.Open();
+        }
+
+        private void btnCerrarConexion_Click(object sender, EventArgs e)
+        {
+            serialPort1.Close();
+        }
+
+        private void cboPorts_Enter(object sender, EventArgs e)
+        {
+            CargarPuertos();
         }
     }
 }
