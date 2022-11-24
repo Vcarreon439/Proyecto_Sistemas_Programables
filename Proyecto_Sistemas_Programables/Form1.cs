@@ -76,7 +76,7 @@ namespace Proyecto_Sistemas_Programables
                 serialPort1.Open();
                 serialPort1.Write("x");
                 serialPort1.Write("1");
-                Console.WriteLine(serialPort1.ReadTo("#"));
+                /*Console.WriteLine(serialPort1.ReadTo("#"));*/
                 serialPort1.Close();
             }
             catch (Exception ex)
@@ -284,6 +284,36 @@ namespace Proyecto_Sistemas_Programables
             m = 1;
             mx = e.X;
             my = e.Y;
+        }
+
+        private void btnGasDetection_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("k");
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("1");
+        }
+
+        private void btnSoilDetection_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("h");
+        }
+
+        private void btnCumpleaños_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlerta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBienvenido_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
