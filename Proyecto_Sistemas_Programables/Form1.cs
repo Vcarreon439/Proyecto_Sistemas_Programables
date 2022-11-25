@@ -325,12 +325,49 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnAlerta_Click(object sender, EventArgs e)
         {
-
+            PicBoxAlarmaOFF.Visible = false;
+            PicBoxAlarmaOn.Visible = true;
         }
-
+        
         private void btnBienvenido_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void PicBoxAlarmaOFF_Click(object sender, EventArgs e)
+        {
+            PicBoxAlarmaOFF.Visible = false;
+            PicBoxAlarmaOn.Visible = true;
+        }
+
+        private void PicBoxAlarmaOn_Click(object sender, EventArgs e)
+        {
+            PicBoxAlarmaOFF.Visible = true;
+            PicBoxAlarmaOn.Visible = false;
+        }
+
+        private void PicBoxReleOff_Click(object sender, EventArgs e)
+        {
+            PicBoxReleOff.Visible = false;
+            PicBoxReleOn.Visible = true;
+        }
+
+        private void PicBoxReleOn_Click(object sender, EventArgs e)
+        {
+            PicBoxReleOff.Visible = true;
+            PicBoxReleOn.Visible = false;
+        }
+
+        private void PicBoxVentiladorOnPWM_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOnPWM.Visible = false;
+            PicBoxVentiladorOffPWM.Visible = true;
+        }
+
+        private void PicBoxVentiladorOffPWM_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOnPWM.Visible = true;
+            PicBoxVentiladorOffPWM.Visible = false;
         }
 
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)

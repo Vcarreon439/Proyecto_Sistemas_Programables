@@ -128,5 +128,20 @@
   <ItemGroup>
     <None Include="Resources\image-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alrma_apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alrma_apagar-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alrma_encendida-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rele.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
