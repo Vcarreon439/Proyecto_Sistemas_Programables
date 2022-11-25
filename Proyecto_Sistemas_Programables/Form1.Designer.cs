@@ -92,6 +92,7 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.PicBoxBarra = new System.Windows.Forms.PictureBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,6 +135,7 @@
             this.tabControl1.Controls.Add(this.tbSensores);
             this.tabControl1.Controls.Add(this.tbRutina);
             this.tabControl1.Controls.Add(this.tbModulacion);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 37);
             this.tabControl1.Name = "tabControl1";
@@ -898,6 +900,16 @@
             this.PicBoxBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseMove);
             this.PicBoxBarra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseUp);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(441, 272);
+            this.tabPage1.TabIndex = 5;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1020,6 +1032,7 @@
         private System.Windows.Forms.PictureBox PicBoxVentiladorOnPWM;
         private System.Windows.Forms.PictureBox PicBoxReleOn;
         private System.Windows.Forms.PictureBox PicBoxReleOff;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
 
