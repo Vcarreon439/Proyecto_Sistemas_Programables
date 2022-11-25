@@ -68,7 +68,6 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnConexion_Click(object sender, EventArgs e)
         {
-
             try
             {
                 serialPort1.PortName = cboPorts.Text;
@@ -76,7 +75,7 @@ namespace Proyecto_Sistemas_Programables
                 serialPort1.Open();
                 serialPort1.Write("x");
                 serialPort1.Write("1");
-                Console.WriteLine(serialPort1.ReadTo("#"));
+                Console.WriteLine("Conexion Exitosa");
                 serialPort1.Close();
             }
             catch (Exception ex)
@@ -205,6 +204,7 @@ namespace Proyecto_Sistemas_Programables
         {
             PicBoxFocoApagadoAmarillo.Visible = false;
             PicBoxEncendidoAmarillo.Visible = true;
+            trcBrAmarillo.Value = trcBrAmarillo.Maximum;
             serialPort1.Write("p");
         }
 
@@ -212,6 +212,7 @@ namespace Proyecto_Sistemas_Programables
         {
             PicBoxFocoApagadoAmarillo.Visible = true;
             PicBoxEncendidoAmarillo.Visible = false;
+            trcBrAmarillo.Value = 0;
             serialPort1.Write("q");
         }
 
@@ -266,12 +267,28 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnAbrirConexion_Click(object sender, EventArgs e)
         {
-            serialPort1.Open();
+            if (!serialPort1.IsOpen)
+            {
+                serialPort1.Open();
+            }
+            else
+            {
+                MessageBox.Show($"El puerto {cboPorts.Text} ya se encuentra abierto");
+            }
         }
 
         private void btnCerrarConexion_Click(object sender, EventArgs e)
         {
-            serialPort1.Close();
+            if (serialPort1.IsOpen)
+            {
+                serialPort1.Close();
+            }
+            else
+            {
+                MessageBox.Show($"El puerto {cboPorts.Text} ya se encuentra cerrado");
+            }
+
+            
         }
 
         private void cboPorts_Enter(object sender, EventArgs e)
@@ -284,6 +301,35 @@ namespace Proyecto_Sistemas_Programables
             m = 1;
             mx = e.X;
             my = e.Y;
+        }
+
+        private void PicBoxZumbadorOff_Click(object sender, EventArgs e)
+        {
+            PicBoxZumbadorOff.Visible = false;
+            PicBoxZumbadorOn.Visible = true;
+        }
+
+        private void PicBoxZumbadorOn_Click(object sender, EventArgs e)
+        {
+            PicBoxZumbadorOff.Visible = true;
+            PicBoxZumbadorOn.Visible = false;
+        }
+
+        private void PicBoxVentiladorOffPWM_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOnPWM.Visible = true;
+            PicBoxVentiladorOffPWM.Visible = false;
+        }
+
+        private void PicBoxVentiladorOnPWM_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOnPWM.Visible = false;
+            PicBoxVentiladorOffPWM.Visible = true;
+        }
+
+        private void PicBoxPuertaCerrada_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
