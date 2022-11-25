@@ -18,9 +18,6 @@ namespace Proyecto_Sistemas_Programables
         Dictionary<string, string> Dispositivos_COM = new Dictionary<string, string>();
         string stateString="";
 
-        bool vent = false;
-
-
         public frmPrincipal()
         {
             InitializeComponent();
@@ -30,33 +27,57 @@ namespace Proyecto_Sistemas_Programables
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            CargarPuertos();
+            try
+            {
+                CargarPuertos();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void CargarPuertos()
         {
-            using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PnPEntity WHERE Caption like '%(COM%'"))
+            try
             {
-                var portnames = SerialPort.GetPortNames();
-                var ports = searcher.Get().Cast<ManagementBaseObject>().ToList().Select(p => p["Caption"].ToString());
-                var portList = portnames.Select(n => ports.FirstOrDefault(s => s.Contains(n))).ToList();
+                Dispositivos_COM = new Dictionary<string, string>();
+                cboPorts.Items.Clear();
 
-                for (int i = 0; i < portList.Count; i++)
+                using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PnPEntity WHERE Caption like '%(COM%'"))
                 {
-                    Dispositivos_COM.Add($"{portnames[i]}", $"{portList[i]}");
+                    var portnames = SerialPort.GetPortNames();
+                    var ports = searcher.Get().Cast<ManagementBaseObject>().ToList().Select(p => p["Caption"].ToString());
+                    var portList = portnames.Select(n => ports.FirstOrDefault(s => s.Contains(n))).ToList();
+
+                    for (int i = 0; i < portList.Count; i++)
+                    {
+                        Dispositivos_COM.Add($"{portnames[i]}", $"{portList[i]}");
+                    }
+                }
+
+                foreach (string item in SerialPort.GetPortNames())
+                {
+                    cboPorts.Items.Add(item);
                 }
             }
-
-            foreach (string item in SerialPort.GetPortNames())
+            catch (Exception ex)
             {
-                cboPorts.Items.Add(item);
+                Console.WriteLine(ex.Message);
             }
         }
 
         private void cboPorts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var decripcion = Dispositivos_COM[$"{cboPorts.Text}"];
-            lblPortDesc.Text = decripcion.ToString();
+            try
+            {
+                var decripcion = Dispositivos_COM[$"{cboPorts.Text}"];
+                lblPortDesc.Text = decripcion.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void btnConexion_Click(object sender, EventArgs e)
@@ -77,11 +98,6 @@ namespace Proyecto_Sistemas_Programables
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine(stateString);
-        }
-
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             try
@@ -97,9 +113,13 @@ namespace Proyecto_Sistemas_Programables
                 {
                     Invoke(new MethodInvoker(() => {
 
-                        //PIRComponent(bool.Parse(aaa[0].Remove(0)));
-
                         lblLevel.Text = aaa[0].Replace('@', ' ');
+
+                        if (lblLevel.Text.Substring(1, 1) == "0")
+                            PIRComponent(false);
+                        else
+                            PIRComponent(true);
+
                         lblSensFoto.Text = aaa[1];
                         lblSenseSoil.Text = aaa[2];
                         lblSenseRain.Text = aaa[3];
@@ -124,7 +144,7 @@ namespace Proyecto_Sistemas_Programables
             if (val)
                 icnPctPIR.IconColor = Color.Red;
             else
-                icnPctPIR.IconColor = Color.Black;
+                icnPctPIR.IconColor = Color.FromArgb(192, 192, 255);
         }
 
 
@@ -147,7 +167,6 @@ namespace Proyecto_Sistemas_Programables
             PicBoxVentiladorOn.Visible = true;
             PicBoxVentiladorOff.Visible = false;
             serialPort1.Write("r");
-            vent = true;
         }
 
         private void PicBoxVentanaCerrada_Click(object sender, EventArgs e)
@@ -222,14 +241,12 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnDer_Click(object sender, EventArgs e)
         {
-            vent = true;
             PicBoxVentiladorOff_Click(sender, e);
             serialPort1.Write("r");
         }
 
         private void btnIzqVent_Click_1(object sender, EventArgs e)
         {
-            vent = true;
             PicBoxVentiladorOn.Visible = true;
             PicBoxVentiladorOff.Visible = false;
             serialPort1.Write("z");
@@ -237,20 +254,34 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnDetener_Click(object sender, EventArgs e)
         {
-            vent = false;
             PicBoxVentiladorOn_Click(sender, e);
             serialPort1.Write("s");
         }
 
         private void btnAbrirConexion_Click(object sender, EventArgs e)
         {
-            if (!serialPort1.IsOpen)
+            try
             {
-                serialPort1.Open();
+                if (cboPorts.Text=="")
+                {
+                    MessageBox.Show("Porfavor seleccione un puerto");
+                }
+
+                if (!serialPort1.IsOpen)
+                {
+                    serialPort1.PortName = cboPorts.Text;
+                    serialPort1.BaudRate = 9600;
+                    serialPort1.Open();
+                    MessageBox.Show("Conexion exitosa!", "Atencion", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"El puerto {cboPorts.Text} ya se encuentra abierto");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show($"El puerto {cboPorts.Text} ya se encuentra abierto");
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -425,6 +456,11 @@ namespace Proyecto_Sistemas_Programables
             serialPort1.Write("t");
             Console.WriteLine(trcBrPuerta.Value * ((int)(180 / 10)));
             serialPort1.Write($"{trcBrPuerta.Value * ((int)(180 / 10))}#");
+        }
+
+        private void cboPorts_Enter(object sender, EventArgs e)
+        {
+            CargarPuertos();
         }
 
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
