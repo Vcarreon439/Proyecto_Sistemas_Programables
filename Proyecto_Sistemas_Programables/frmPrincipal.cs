@@ -16,7 +16,6 @@ namespace Proyecto_Sistemas_Programables
     public partial class frmPrincipal : Form
     {
         Dictionary<string, string> Dispositivos_COM = new Dictionary<string, string>();
-        string stateString="";
 
         public frmPrincipal()
         {
