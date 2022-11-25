@@ -286,6 +286,35 @@ namespace Proyecto_Sistemas_Programables
             my = e.Y;
         }
 
+        private void PicBoxZumbadorOff_Click(object sender, EventArgs e)
+        {
+            PicBoxZumbadorOff.Visible = false;
+            PicBoxZumbadorOn.Visible = true;
+        }
+
+        private void PicBoxZumbadorOn_Click(object sender, EventArgs e)
+        {
+            PicBoxZumbadorOff.Visible = true;
+            PicBoxZumbadorOn.Visible = false;
+        }
+
+        private void PicBoxVentiladorOffPWM_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOnPWM.Visible = true;
+            PicBoxVentiladorOffPWM.Visible = false;
+        }
+
+        private void PicBoxVentiladorOnPWM_Click(object sender, EventArgs e)
+        {
+            PicBoxVentiladorOnPWM.Visible = false;
+            PicBoxVentiladorOffPWM.Visible = true;
+        }
+
+        private void PicBoxPuertaCerrada_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
