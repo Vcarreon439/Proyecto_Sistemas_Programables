@@ -85,6 +85,11 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.PicBoxBarra = new System.Windows.Forms.PictureBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnGasDetection = new System.Windows.Forms.Button();
+            this.btnSoilDetection = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnReiniciar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,6 +120,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentiladorOnPWM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxBarra)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -270,6 +276,7 @@
             this.btnBienvenido.TabIndex = 31;
             this.btnBienvenido.Text = "Bienvenido";
             this.btnBienvenido.UseVisualStyleBackColor = false;
+            this.btnBienvenido.Click += new System.EventHandler(this.btnBienvenido_Click);
             // 
             // btnAlerta
             // 
@@ -284,6 +291,7 @@
             this.btnAlerta.TabIndex = 30;
             this.btnAlerta.Text = "Alerta";
             this.btnAlerta.UseVisualStyleBackColor = false;
+            this.btnAlerta.Click += new System.EventHandler(this.btnAlerta_Click);
             // 
             // btnCumpleaños
             // 
@@ -298,6 +306,7 @@
             this.btnCumpleaños.TabIndex = 29;
             this.btnCumpleaños.Text = "Cumpleaños";
             this.btnCumpleaños.UseVisualStyleBackColor = false;
+            this.btnCumpleaños.Click += new System.EventHandler(this.btnCumpleaños_Click);
             // 
             // btnDer
             // 
@@ -492,12 +501,12 @@
             // 
             this.icnPctPIR.BackColor = System.Drawing.Color.Transparent;
             this.icnPctPIR.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.icnPctPIR.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.icnPctPIR.IconChar = FontAwesome.Sharp.IconChar.PersonWalking;
             this.icnPctPIR.IconColor = System.Drawing.SystemColors.ControlText;
             this.icnPctPIR.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icnPctPIR.Location = new System.Drawing.Point(35, 17);
             this.icnPctPIR.Name = "icnPctPIR";
-            this.icnPctPIR.Size = new System.Drawing.Size(32, 32);
+            this.icnPctPIR.Size = new System.Drawing.Size(68, 51);
             this.icnPctPIR.TabIndex = 19;
             this.icnPctPIR.TabStop = false;
             // 
@@ -605,12 +614,12 @@
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Cloud;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.Location = new System.Drawing.Point(35, 87);
+            this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.iconPictureBox1.Size = new System.Drawing.Size(68, 47);
             this.iconPictureBox1.TabIndex = 20;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -777,6 +786,59 @@
             this.PicBoxBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseMove);
             this.PicBoxBarra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseUp);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btnReiniciar);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.btnSoilDetection);
+            this.tabPage3.Controls.Add(this.btnGasDetection);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(587, 364);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnGasDetection
+            // 
+            this.btnGasDetection.Location = new System.Drawing.Point(67, 67);
+            this.btnGasDetection.Name = "btnGasDetection";
+            this.btnGasDetection.Size = new System.Drawing.Size(98, 23);
+            this.btnGasDetection.TabIndex = 0;
+            this.btnGasDetection.Text = "Rutina Gas";
+            this.btnGasDetection.UseVisualStyleBackColor = true;
+            this.btnGasDetection.Click += new System.EventHandler(this.btnGasDetection_Click);
+            // 
+            // btnSoilDetection
+            // 
+            this.btnSoilDetection.Location = new System.Drawing.Point(67, 121);
+            this.btnSoilDetection.Name = "btnSoilDetection";
+            this.btnSoilDetection.Size = new System.Drawing.Size(98, 23);
+            this.btnSoilDetection.TabIndex = 1;
+            this.btnSoilDetection.Text = "Rutina Tierra";
+            this.btnSoilDetection.UseVisualStyleBackColor = true;
+            this.btnSoilDetection.Click += new System.EventHandler(this.btnSoilDetection_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(67, 176);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btnReiniciar
+            // 
+            this.btnReiniciar.Location = new System.Drawing.Point(107, 247);
+            this.btnReiniciar.Name = "btnReiniciar";
+            this.btnReiniciar.Size = new System.Drawing.Size(75, 23);
+            this.btnReiniciar.TabIndex = 3;
+            this.btnReiniciar.Text = "Reiniciar";
+            this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -828,6 +890,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxVentiladorOnPWM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxBarra)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -879,17 +942,6 @@
         private System.Windows.Forms.Button btnAbrirConexion;
         private System.Windows.Forms.PictureBox PicBoxBarra;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox PicBoxZumbadorOff;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TrackBar trcBrVentilador;
-        private System.Windows.Forms.TrackBar trcBrAmarillo;
-        private System.Windows.Forms.TrackBar trcBrBlanco;
-        private System.Windows.Forms.PictureBox PicBoxPuertaCerrada;
-        private System.Windows.Forms.PictureBox PicBoxPuertaAbierta;
-        private System.Windows.Forms.PictureBox PicBoxFocoApagadoAmarillo;
-        private System.Windows.Forms.PictureBox PicBoxEncendidoAmarillo;
-        private System.Windows.Forms.PictureBox PicBoxVentiladorOffPWM;
-        private System.Windows.Forms.PictureBox PicBoxVentiladorOnPWM;
     }
 }
 
