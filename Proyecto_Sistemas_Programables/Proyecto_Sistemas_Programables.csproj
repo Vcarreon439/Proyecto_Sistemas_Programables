@@ -12,7 +12,6 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -130,10 +129,19 @@
     <None Include="Resources\image-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sonido zumbador.png" />
+    <None Include="Resources\alrma_apagar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sonido zumbador off.png" />
+    <None Include="Resources\alrma_apagar-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alrma_encendida-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rele.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

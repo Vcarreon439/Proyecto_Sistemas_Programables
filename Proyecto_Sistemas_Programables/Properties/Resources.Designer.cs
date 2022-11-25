@@ -63,6 +63,36 @@ namespace Proyecto_Sistemas_Programables.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap alrma_apagar {
+            get {
+                object obj = ResourceManager.GetObject("alrma_apagar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alrma_apagar_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("alrma_apagar-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap alrma_encendida_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("alrma_encendida-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap depositphotos_174335366_stock_photo_cute_cloud_rain_kawaii_face_3363758100 {
             get {
                 object obj = ResourceManager.GetObject("depositphotos_174335366-stock-photo-cute-cloud-rain-kawaii-face-3363758100", resourceCulture);
@@ -133,6 +163,16 @@ namespace Proyecto_Sistemas_Programables.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("image-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagen1 {
             get {
                 object obj = ResourceManager.GetObject("Imagen1", resourceCulture);
@@ -183,19 +223,9 @@ namespace Proyecto_Sistemas_Programables.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sonido_zumbador {
+        internal static System.Drawing.Bitmap rele {
             get {
-                object obj = ResourceManager.GetObject("sonido zumbador", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sonido_zumbador_off {
-            get {
-                object obj = ResourceManager.GetObject("sonido zumbador off", resourceCulture);
+                object obj = ResourceManager.GetObject("rele", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

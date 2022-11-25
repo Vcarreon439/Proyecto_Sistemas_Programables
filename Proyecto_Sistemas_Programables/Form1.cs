@@ -303,22 +303,59 @@ namespace Proyecto_Sistemas_Programables
             my = e.Y;
         }
 
-        private void PicBoxZumbadorOff_Click(object sender, EventArgs e)
+        private void btnGasDetection_Click(object sender, EventArgs e)
         {
-            PicBoxZumbadorOff.Visible = false;
-            PicBoxZumbadorOn.Visible = true;
+            serialPort1.Write("k");
         }
 
-        private void PicBoxZumbadorOn_Click(object sender, EventArgs e)
+        private void btnReiniciar_Click(object sender, EventArgs e)
         {
-            PicBoxZumbadorOff.Visible = true;
-            PicBoxZumbadorOn.Visible = false;
+            serialPort1.Write("1");
         }
 
-        private void PicBoxVentiladorOffPWM_Click(object sender, EventArgs e)
+        private void btnSoilDetection_Click(object sender, EventArgs e)
         {
-            PicBoxVentiladorOnPWM.Visible = true;
-            PicBoxVentiladorOffPWM.Visible = false;
+            serialPort1.Write("h");
+        }
+
+        private void btnCumpleaños_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlerta_Click(object sender, EventArgs e)
+        {
+            PicBoxAlarmaOFF.Visible = false;
+            PicBoxAlarmaOn.Visible = true;
+        }
+        
+        private void btnBienvenido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PicBoxAlarmaOFF_Click(object sender, EventArgs e)
+        {
+            PicBoxAlarmaOFF.Visible = false;
+            PicBoxAlarmaOn.Visible = true;
+        }
+
+        private void PicBoxAlarmaOn_Click(object sender, EventArgs e)
+        {
+            PicBoxAlarmaOFF.Visible = true;
+            PicBoxAlarmaOn.Visible = false;
+        }
+
+        private void PicBoxReleOff_Click(object sender, EventArgs e)
+        {
+            PicBoxReleOff.Visible = false;
+            PicBoxReleOn.Visible = true;
+        }
+
+        private void PicBoxReleOn_Click(object sender, EventArgs e)
+        {
+            PicBoxReleOff.Visible = true;
+            PicBoxReleOn.Visible = false;
         }
 
         private void PicBoxVentiladorOnPWM_Click(object sender, EventArgs e)
@@ -327,9 +364,10 @@ namespace Proyecto_Sistemas_Programables
             PicBoxVentiladorOffPWM.Visible = true;
         }
 
-        private void PicBoxPuertaCerrada_Click_1(object sender, EventArgs e)
+        private void PicBoxVentiladorOffPWM_Click(object sender, EventArgs e)
         {
-
+            PicBoxVentiladorOnPWM.Visible = true;
+            PicBoxVentiladorOffPWM.Visible = false;
         }
 
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)
