@@ -28,13 +28,6 @@ namespace Proyecto_Sistemas_Programables
 
         int m, mx, my;
 
-        private void btnIzqVent_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             CargarPuertos();
@@ -145,7 +138,6 @@ namespace Proyecto_Sistemas_Programables
         {
             PicBoxVentiladorOn.Visible = false;
             PicBoxVentiladorOff.Visible = true;
-
             serialPort1.Write("s");
         }
 
@@ -162,18 +154,23 @@ namespace Proyecto_Sistemas_Programables
         {
             PicBoxVentanaAbierta.Visible = true;
             PicBoxVentanaCerrada.Visible = false;
+
+            serialPort1.Write("n");
         }
 
         private void PicBoxVentanaAbierta_Click(object sender, EventArgs e)
         {
             PicBoxVentanaAbierta.Visible = false;
             PicBoxVentanaCerrada.Visible = true;
+
+            serialPort1.Write("o");
         }
 
         private void PicBoxPuertaAbierta_Click(object sender, EventArgs e)
         {
             PicBoxPuertaAbierta.Visible = false;
             PicBoxPuertaCerrada.Visible = true;
+            trcBrPuerta.Value = 0;
             serialPort1.Write("m");
         }
 
@@ -181,6 +178,8 @@ namespace Proyecto_Sistemas_Programables
         {
             PicBoxPuertaAbierta.Visible = true;
             PicBoxPuertaCerrada.Visible = false;
+            trcBrPuerta.Value = trcBrPuerta.Maximum;
+
             serialPort1.Write("l");
         }
 
@@ -243,28 +242,6 @@ namespace Proyecto_Sistemas_Programables
             serialPort1.Write("s");
         }
 
-        private void trcBrBlanco_Scroll(object sender, EventArgs e)
-        {
-        }
-
-        private void trcBrAmarillo_Scroll(object sender, EventArgs e)
-        {
-            if (trcBrAmarillo.Value<=0)
-            {
-                PicBoxFocoApagadoAmarillo.Visible = true;
-                PicBoxEncendidoAmarillo.Visible = false;
-            }
-            else
-            {
-                PicBoxFocoApagadoAmarillo.Visible = false;
-                PicBoxEncendidoAmarillo.Visible = true;
-            }
-
-            serialPort1.Write("v");
-            Console.WriteLine(trcBrAmarillo.Value * ((int)(255 / 10)));
-            serialPort1.Write($"{trcBrAmarillo.Value*((int)(255/10))}#");
-        }
-
         private void btnAbrirConexion_Click(object sender, EventArgs e)
         {
             if (!serialPort1.IsOpen)
@@ -291,11 +268,6 @@ namespace Proyecto_Sistemas_Programables
             
         }
 
-        private void cboPorts_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void PicBoxBarra_MouseDown(object sender, MouseEventArgs e)
         {
             m = 1;
@@ -310,7 +282,7 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
-            serialPort1.Write("1");
+            serialPort1.Write("11");
         }
 
         private void btnSoilDetection_Click(object sender, EventArgs e)
@@ -320,54 +292,139 @@ namespace Proyecto_Sistemas_Programables
 
         private void btnCumpleaños_Click(object sender, EventArgs e)
         {
-
+            PicBoxAlarmaOFF.Visible = false;
+            PicBoxAlarmaOn.Visible = true;
+            serialPort1.Write("e");
         }
 
         private void btnAlerta_Click(object sender, EventArgs e)
         {
-            PicBoxAlarmaOFF.Visible = false;
-            PicBoxAlarmaOn.Visible = true;
+            PicBoxAlarmaOFF.Visible = true;
+            PicBoxAlarmaOn.Visible = false;
+
+            serialPort1.Write("g");
         }
         
         private void btnBienvenido_Click(object sender, EventArgs e)
         {
-
+            PicBoxAlarmaOFF.Visible = false;
+            PicBoxAlarmaOn.Visible = true;
+            serialPort1.Write("f");
         }
 
         private void PicBoxAlarmaOFF_Click(object sender, EventArgs e)
         {
             PicBoxAlarmaOFF.Visible = false;
             PicBoxAlarmaOn.Visible = true;
+            serialPort1.Write("3");
         }
 
         private void PicBoxAlarmaOn_Click(object sender, EventArgs e)
         {
             PicBoxAlarmaOFF.Visible = true;
             PicBoxAlarmaOn.Visible = false;
+            serialPort1.Write("g");
         }
 
         private void PicBoxReleOff_Click(object sender, EventArgs e)
         {
             PicBoxReleOff.Visible = false;
             PicBoxReleOn.Visible = true;
+
+            serialPort1.Write("c");
+
         }
 
         private void PicBoxReleOn_Click(object sender, EventArgs e)
         {
             PicBoxReleOff.Visible = true;
             PicBoxReleOn.Visible = false;
+
+            serialPort1.Write("d");
         }
 
         private void PicBoxVentiladorOnPWM_Click(object sender, EventArgs e)
         {
             PicBoxVentiladorOnPWM.Visible = false;
             PicBoxVentiladorOffPWM.Visible = true;
+            trcBarVentilador.Value = 0;
+            PicBoxVentiladorOn.Visible = false;
+            PicBoxVentiladorOff.Visible = true;
+            serialPort1.Write("s");
         }
 
         private void PicBoxVentiladorOffPWM_Click(object sender, EventArgs e)
         {
             PicBoxVentiladorOnPWM.Visible = true;
             PicBoxVentiladorOffPWM.Visible = false;
+            trcBarVentilador.Value = trcBarVentilador.Maximum;
+            PicBoxVentiladorOn.Visible = true;
+            PicBoxVentiladorOff.Visible = false;
+            serialPort1.Write("r");
+        }
+
+        private void btnContrasena_Click(object sender, EventArgs e)
+        {
+            serialPort1.Write("5");
+        }
+
+        private void trcBrAmarillo_Scroll(object sender, EventArgs e)
+        {
+            if (trcBrAmarillo.Value <= 0)
+            {
+                PicBoxFocoApagadoAmarillo.Visible = true;
+                PicBoxEncendidoAmarillo.Visible = false;
+            }
+            else
+            {
+                PicBoxFocoApagadoAmarillo.Visible = false;
+                PicBoxEncendidoAmarillo.Visible = true;
+            }
+
+            serialPort1.Write("v");
+            Console.WriteLine(trcBrAmarillo.Value * ((int)(255 / 10)));
+            serialPort1.Write($"{trcBrAmarillo.Value * ((int)(255 / 10))}#");
+        }
+
+        private void trcBarVentilador_Scroll(object sender, EventArgs e)
+        {
+            if (trcBarVentilador.Value <= 0)
+            {
+                PicBoxVentiladorOffPWM.Visible = true;
+                PicBoxVentiladorOnPWM.Visible = false;
+                PicBoxVentiladorOn.Visible = false;
+                PicBoxVentiladorOff.Visible = true;
+            }
+            else
+            {
+                PicBoxVentiladorOffPWM.Visible = false;
+                PicBoxVentiladorOnPWM.Visible = true;
+                PicBoxVentiladorOn.Visible = true;
+                PicBoxVentiladorOff.Visible = false;
+                
+            }
+
+            serialPort1.Write("w");
+            Console.WriteLine(trcBarVentilador.Value * ((int)(255 / 10)));
+            serialPort1.Write($"{trcBarVentilador.Value * ((int)(255 / 10))}#");
+        }
+
+        private void trcBrPuerta_Scroll(object sender, EventArgs e)
+        {
+            if (trcBarVentilador.Value <= 0)
+            {
+                PicBoxPuertaAbierta.Visible = true;
+                PicBoxPuertaCerrada.Visible = false;
+            }
+            else
+            {
+                PicBoxPuertaAbierta.Visible = false;
+                PicBoxPuertaCerrada.Visible = true;
+            }
+
+            serialPort1.Write("t");
+            Console.WriteLine(trcBrPuerta.Value * ((int)(180 / 10)));
+            serialPort1.Write($"{trcBrPuerta.Value * ((int)(180 / 10))}#");
         }
 
         private void PicBoxBarra_MouseUp(object sender, MouseEventArgs e)

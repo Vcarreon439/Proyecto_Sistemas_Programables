@@ -73,7 +73,7 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.tbRutina = new System.Windows.Forms.TabPage();
             this.btnReiniciar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnContrasena = new System.Windows.Forms.Button();
             this.btnSoilDetection = new System.Windows.Forms.Button();
             this.btnGasDetection = new System.Windows.Forms.Button();
             this.tbModulacion = new System.Windows.Forms.TabPage();
@@ -92,7 +92,6 @@
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.PicBoxBarra = new System.Windows.Forms.PictureBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tbConfig.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,10 +131,9 @@
             // 
             this.tabControl1.Controls.Add(this.tbConfig);
             this.tabControl1.Controls.Add(this.tbActuadores);
+            this.tabControl1.Controls.Add(this.tbModulacion);
             this.tabControl1.Controls.Add(this.tbSensores);
             this.tabControl1.Controls.Add(this.tbRutina);
-            this.tabControl1.Controls.Add(this.tbModulacion);
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 37);
             this.tabControl1.Name = "tabControl1";
@@ -232,7 +230,6 @@
             this.cboPorts.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cboPorts, "Seleccione el puerto correspondiente a su Arduino");
             this.cboPorts.SelectedIndexChanged += new System.EventHandler(this.cboPorts_SelectedIndexChanged);
-            this.cboPorts.Enter += new System.EventHandler(this.cboPorts_Enter);
             // 
             // tbActuadores
             // 
@@ -282,7 +279,7 @@
             this.btnBienvenido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnBienvenido.Location = new System.Drawing.Point(336, 24);
+            this.btnBienvenido.Location = new System.Drawing.Point(336, 16);
             this.btnBienvenido.Name = "btnBienvenido";
             this.btnBienvenido.Size = new System.Drawing.Size(87, 23);
             this.btnBienvenido.TabIndex = 31;
@@ -297,11 +294,11 @@
             this.btnAlerta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlerta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnAlerta.Location = new System.Drawing.Point(336, 55);
+            this.btnAlerta.Location = new System.Drawing.Point(336, 95);
             this.btnAlerta.Name = "btnAlerta";
             this.btnAlerta.Size = new System.Drawing.Size(87, 23);
             this.btnAlerta.TabIndex = 30;
-            this.btnAlerta.Text = "Alerta";
+            this.btnAlerta.Text = "Detener";
             this.btnAlerta.UseVisualStyleBackColor = false;
             this.btnAlerta.Click += new System.EventHandler(this.btnAlerta_Click);
             // 
@@ -312,7 +309,7 @@
             this.btnCumpleaños.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCumpleaños.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCumpleaños.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnCumpleaños.Location = new System.Drawing.Point(336, 88);
+            this.btnCumpleaños.Location = new System.Drawing.Point(336, 56);
             this.btnCumpleaños.Name = "btnCumpleaños";
             this.btnCumpleaños.Size = new System.Drawing.Size(87, 23);
             this.btnCumpleaños.TabIndex = 29;
@@ -667,7 +664,7 @@
             // 
             this.tbRutina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.tbRutina.Controls.Add(this.btnReiniciar);
-            this.tbRutina.Controls.Add(this.button3);
+            this.tbRutina.Controls.Add(this.btnContrasena);
             this.tbRutina.Controls.Add(this.btnSoilDetection);
             this.tbRutina.Controls.Add(this.btnGasDetection);
             this.tbRutina.Location = new System.Drawing.Point(4, 22);
@@ -683,7 +680,7 @@
             this.btnReiniciar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReiniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReiniciar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnReiniciar.Location = new System.Drawing.Point(182, 186);
+            this.btnReiniciar.Location = new System.Drawing.Point(182, 188);
             this.btnReiniciar.Name = "btnReiniciar";
             this.btnReiniciar.Size = new System.Drawing.Size(75, 23);
             this.btnReiniciar.TabIndex = 3;
@@ -691,18 +688,19 @@
             this.btnReiniciar.UseVisualStyleBackColor = false;
             this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
-            // button3
+            // btnContrasena
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button3.Location = new System.Drawing.Point(145, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnContrasena.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnContrasena.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContrasena.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btnContrasena.Location = new System.Drawing.Point(145, 125);
+            this.btnContrasena.Name = "btnContrasena";
+            this.btnContrasena.Size = new System.Drawing.Size(155, 46);
+            this.btnContrasena.TabIndex = 2;
+            this.btnContrasena.Text = "Rutina Contraseña Incorrecta";
+            this.btnContrasena.UseVisualStyleBackColor = false;
+            this.btnContrasena.Click += new System.EventHandler(this.btnContrasena_Click);
             // 
             // btnSoilDetection
             // 
@@ -710,7 +708,7 @@
             this.btnSoilDetection.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSoilDetection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSoilDetection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnSoilDetection.Location = new System.Drawing.Point(145, 92);
+            this.btnSoilDetection.Location = new System.Drawing.Point(145, 91);
             this.btnSoilDetection.Name = "btnSoilDetection";
             this.btnSoilDetection.Size = new System.Drawing.Size(155, 23);
             this.btnSoilDetection.TabIndex = 1;
@@ -724,7 +722,7 @@
             this.btnGasDetection.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGasDetection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGasDetection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnGasDetection.Location = new System.Drawing.Point(145, 54);
+            this.btnGasDetection.Location = new System.Drawing.Point(145, 57);
             this.btnGasDetection.Name = "btnGasDetection";
             this.btnGasDetection.Size = new System.Drawing.Size(155, 23);
             this.btnGasDetection.TabIndex = 0;
@@ -781,6 +779,7 @@
             this.trcBarVentilador.Name = "trcBarVentilador";
             this.trcBarVentilador.Size = new System.Drawing.Size(322, 45);
             this.trcBarVentilador.TabIndex = 50;
+            this.trcBarVentilador.Scroll += new System.EventHandler(this.trcBarVentilador_Scroll);
             // 
             // trcBrAmarillo
             // 
@@ -789,13 +788,17 @@
             this.trcBrAmarillo.Name = "trcBrAmarillo";
             this.trcBrAmarillo.Size = new System.Drawing.Size(322, 45);
             this.trcBrAmarillo.TabIndex = 46;
+            this.trcBrAmarillo.Scroll += new System.EventHandler(this.trcBrAmarillo_Scroll);
             // 
             // trcBrPuerta
             // 
             this.trcBrPuerta.Location = new System.Drawing.Point(98, 108);
             this.trcBrPuerta.Name = "trcBrPuerta";
             this.trcBrPuerta.Size = new System.Drawing.Size(322, 45);
+            this.trcBrPuerta.SmallChange = 5;
             this.trcBrPuerta.TabIndex = 44;
+            this.trcBrPuerta.TickFrequency = 5;
+            this.trcBrPuerta.Scroll += new System.EventHandler(this.trcBrPuerta_Scroll);
             // 
             // PicBoxPuertaCerrada
             // 
@@ -899,16 +902,6 @@
             this.PicBoxBarra.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseDown);
             this.PicBoxBarra.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseMove);
             this.PicBoxBarra.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PicBoxBarra_MouseUp);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(441, 272);
-            this.tabPage1.TabIndex = 5;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
@@ -1014,7 +1007,7 @@
         private System.Windows.Forms.PictureBox PicBoxBarra;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tbRutina;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnContrasena;
         private System.Windows.Forms.Button btnSoilDetection;
         private System.Windows.Forms.Button btnGasDetection;
         private System.Windows.Forms.Button btnReiniciar;
@@ -1032,7 +1025,6 @@
         private System.Windows.Forms.PictureBox PicBoxVentiladorOnPWM;
         private System.Windows.Forms.PictureBox PicBoxReleOn;
         private System.Windows.Forms.PictureBox PicBoxReleOff;
-        private System.Windows.Forms.TabPage tabPage1;
     }
 }
 
