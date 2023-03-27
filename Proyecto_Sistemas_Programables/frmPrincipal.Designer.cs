@@ -284,7 +284,7 @@
             this.btnBienvenido.Name = "btnBienvenido";
             this.btnBienvenido.Size = new System.Drawing.Size(87, 23);
             this.btnBienvenido.TabIndex = 31;
-            this.btnBienvenido.Text = "Bienvenido";
+            this.btnBienvenido.Text = "Cancion 1";
             this.btnBienvenido.UseVisualStyleBackColor = false;
             this.btnBienvenido.Click += new System.EventHandler(this.btnBienvenido_Click);
             // 
@@ -314,7 +314,7 @@
             this.btnCumpleaños.Name = "btnCumpleaños";
             this.btnCumpleaños.Size = new System.Drawing.Size(87, 23);
             this.btnCumpleaños.TabIndex = 29;
-            this.btnCumpleaños.Text = "Cumpleaños";
+            this.btnCumpleaños.Text = "Cancion 2";
             this.btnCumpleaños.UseVisualStyleBackColor = false;
             this.btnCumpleaños.Click += new System.EventHandler(this.btnCumpleaños_Click);
             // 
